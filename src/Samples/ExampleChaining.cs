@@ -27,7 +27,8 @@ namespace Samples
                     .AsFluentOrchestration(loggerBase)
                     .ThenAsync(Activities.RunStaticActivityWithReturnValue)
                     .ThenAsync<Activities>((c) => c.RunNonStaticActivityWithReturnValue)
-                    .ThenAsync<Activities>((c) => c.RunNonStaticActivityWithReturnValue, (ctx) => new { Name = "Bob Smith" })
+                    .ThenAsync<Activities, string>((c) => c.RunNonStaticActivityWithReturnValue, (ctx) => new { Name = "Bob Smith" })
+                    .Then((ctx) => ctx.Logger.LogInformation($"Activity Result: {ctx.LastStepResult.As<string>()}"))
                     .Then((ctx) => ctx.Logger.LogInformation("Done"));
 
     }
