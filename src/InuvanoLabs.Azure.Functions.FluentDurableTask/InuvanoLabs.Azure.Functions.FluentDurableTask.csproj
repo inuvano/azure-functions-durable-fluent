@@ -9,7 +9,24 @@
     <PackageProjectUrl>https://github.com/inuvano/azure-functions-durable-fluent</PackageProjectUrl>
     <RepositoryUrl>https://github.com/inuvano/azure-functions-durable-fluent</RepositoryUrl>
     <PackageTags>azure durabletask webjobs azure-functions</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Inuvano Limited</Copyright>
+    <Description>A flient API for Azure Durable Functions</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="2.7.2" />
