@@ -15,6 +15,7 @@
     <Description>A flient API for Azure Durable Functions</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
